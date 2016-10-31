@@ -1,0 +1,15 @@
+{
+  "name": "texas_holdem",
+  "version": "1.0.0",
+  "description": "texas holdem poker",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "concat": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "uglify": "^0.1.5"
+  }
+}
