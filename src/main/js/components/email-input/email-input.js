@@ -1,11 +1,11 @@
 app.component('email', {
     controller: function () {
         this.email = '';
+        this.message = '';
         this.validate = function () {
-            var length = this.email.length;
-            if (length > 0 && length < 6) {
+            if (this.email.indexOf('@') < 1 || this.email.indexOf('.') < 1) {
                 this.message = ' Please enter valid e-mail address';
-            } else {
+            }else {
                 this.message = '';
             }
         };

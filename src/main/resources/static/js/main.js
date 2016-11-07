@@ -4,31 +4,21 @@
 var app = angular.module('texas', ['ngRoute']).config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/register', {template: '<registration></registration>'})
-        .when('/login', {template: '<pass>'})
+        .when('/login', {template: '<login>'})
         .otherwise({redirectTo: '/'});
     $locationProvider.html5Mode(true);
 
 
 });
 
-app.component('registration', {
-    controller: function () {
-        this.registerOnServer = function () {
-            console.log('connecting');
-            this.message = 'registration done';
-        };
-    },
-    templateUrl: '/templates/registration.template.html'
-});
-
 app.component('email', {
     controller: function () {
         this.email = '';
+        this.message = '';
         this.validate = function () {
-            var length = this.email.length;
-            if (length > 0 && length < 6) {
+            if (this.email.indexOf('@') < 1 || this.email.indexOf('.') < 1) {
                 this.message = ' Please enter valid e-mail address';
-            } else {
+            }else {
                 this.message = '';
             }
         };
@@ -68,4 +58,24 @@ app.component('username', {
         };
     },
     templateUrl: '/templates/username-input.template.html'
+});
+
+app.component('login', {
+    controller: function () {
+        this.loginOnServer = function () {
+            console.log('login');
+            this.message = 'login done';
+        };
+    },
+    templateUrl: '/templates/login.template.html'
+});
+
+app.component('registration', {
+    controller: function () {
+        this.registerOnServer = function () {
+            console.log('connecting');
+            this.message = 'registration done';
+        };
+    },
+    templateUrl: '/templates/registration.template.html'
 });
