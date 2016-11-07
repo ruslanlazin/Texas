@@ -1,8 +1,13 @@
-<div class="registration">
-    <h1>Hi there!</h1>
+<div class="registration col-lg-3">
     <h3>Registration page</h3>
     <username></username>
     <pass></pass>
-    <button ng-click="$ctrl.registerOnServer()">Send</button>
+    <email></email>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" ng-click="$ctrl.registerOnServer()">Register</button>
     <span>{{$ctrl.message}}</span>
 </div>

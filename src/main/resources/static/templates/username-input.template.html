@@ -1,4 +1,6 @@
-<div class="input-field">
-    <input ng-model="$ctrl.username" ng-change="$ctrl.checkLength()" placeholder="username">
+<div class="input-group">
+    <span class="input-group-addon">Username</span>
+    <input type="text" class="form-control" ng-model="$ctrl.username"
+           ng-change="$ctrl.checkLength()" placeholder="Username">
     <span>{{$ctrl.message}}</span>
 </div>
