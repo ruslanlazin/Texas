@@ -13,7 +13,7 @@ public class LoginController {
 
     @RequestMapping({"/", "/login", "/register"})
     public String doLogin() {
-        System.out.println("jhjhj");
-        return "index2";
+        System.out.println("in login controller");
+        return "index";
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="texas" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Texas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script src="/js/main.js"></script>
+    <base href="/"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="page-header col-sm-12">
+            <img src="/images/vip-club-header.jpg" class="img-responsive" alt="Vip Club" style="width: 100%"/>
+            <div class="row backgrounded">
+                <div class="col-xs-2 col-sm-2">
+                    Sidebar content
+                </div>
+                <div class="col-xs-10 col-sm-10">
+
+                    <div role="navigation">
+                        <ul class="nav nav-tabs">
+                            <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
+                            <li role="presentation"><a href="login">Login</a></li>
+                            <li role="presentation"><a href="register">Registration</a></li>
+                        </ul>
+                    </div>
+                    <div ng-view="">
+                        <!--Angular driven space.-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">footer content</p>
+    </div>
+</footer>
+</body>
+</html>
